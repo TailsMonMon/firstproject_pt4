@@ -29,6 +29,11 @@ namespace firstproject_pt4
 
             Console.WriteLine();
             Console.WriteLine();
+            /* "out" is basicly the same as "return". Out is good for memory handeling. 
+             * Not used very much. 
+             * It's a good way to get the same data two times. All data through "out" 
+             * and messages with a "return" instead. */
+             
 
 
             //      Pass by reference
@@ -36,7 +41,7 @@ namespace firstproject_pt4
             int num2 = 20;
             Console.WriteLine("Before Swap num1 is {0} and num2 is {1}", num1, num2);
 
-            Swap(ref num1, ref num2);
+            Swap(ref num1, ref num2);   // To make the actual swap
             Console.WriteLine("After Swap num1 is {0} and num2 is {1}", num1, num2);
 
             Console.WriteLine();
@@ -57,6 +62,7 @@ namespace firstproject_pt4
             Console.WriteLine("5,0 + 4,5 = {0}", GetSumThing(5.0, 4.5));
             Console.WriteLine("21,4 + 8,6 = {0}", GetSumThing(21.4, 8.6));
             Console.WriteLine("3 + 8 = {0}", GetSumThing(3, 8));
+            Console.WriteLine();
             Console.WriteLine();
 
 
@@ -85,7 +91,7 @@ namespace firstproject_pt4
         }
 
         //      Pass by reference
-        public static void Swap(ref int num1, ref int num2) {
+        public static void Swap(ref int num1, ref int num2) {   // To know the parameters
             int temp = num1;
             num1=num2;
             num2=temp;
